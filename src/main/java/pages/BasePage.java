@@ -58,7 +58,7 @@ abstract class BasePage {
 
     void selectFirst() {
         By loc = By.tagName("li");
-        getWebElement(loc, 30, ExpectedConditions.elementToBeClickable(By.tagName("li"))).click();
+        getWebElement(loc, 40, ExpectedConditions.elementToBeClickable(loc)).click();
     }
 
     void select(By loc, String value, int index) {
@@ -70,7 +70,7 @@ abstract class BasePage {
 
     void waitForLoader(By loc) {
         try {
-            WebDriverWait element = new WebDriverWait(driver, 2);
+            WebDriverWait element = new WebDriverWait(driver, 3);
             element.until(ExpectedConditions.visibilityOfElementLocated(loc));
             WebDriverWait wait = new WebDriverWait(driver, 3);
             wait.until(ExpectedConditions.invisibilityOfElementLocated(loc));

@@ -50,6 +50,7 @@ public class LiveMapPage extends BasePage {
 
     public List<RoadData> getRoadData() {
         List<RoadData> options = new ArrayList<>();
+        waitForLoader(loader);
         for (int i = 0; i < getWebElements(section, 30).size(); i++) {
             String time = getText(timeText, i);
             String length = getText(lengthText, i);

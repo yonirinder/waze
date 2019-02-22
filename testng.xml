@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Exercise">
+    <test name="Automation Tests">
+        <!--Set Browser Variable:-->
+        <!--CHROME-->
+        <!--FF-->
+        <parameter name="browserType" value="CHROME"/>
+        <parameter name="email" value="yoni.rinder@gmail.com"/>
+
+        <classes>
+            <class name="tests.WazeSearchTest"/>
+        </classes>
+    </test>
+
+</suite>
